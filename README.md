@@ -29,8 +29,19 @@ sync.init_sync() # This method will control everything, no need to configure any
 ```
 
 ## GD_API:
-This class the base 
+This class simplifies everything from creation of the service to interact with the Google API and then invoking other methods and dealing with Mime-Types for each thing.
+I've managed to simplify each task so that it's as easy as invoking a method with correct arguments. These are a few important methods which are as easy to invoke as a `sum` function with 2 parameters (I'm bad at giving references ;-;). Following are the methods:
+```python
+# Details for each method is provided in the Examples section
+get_files_list()
+get_folder_id(folder_name)
+get_folder_name(folder_id)
+check_folder_exists(folder_name=None,folder_id=None)
+create_folder(folder_name,parent_folder_name=None,parent_folder_id=None)
+upload_file(file_name,parent_folder_name=None,parent_folder_id=None)
+```
 
+### Example:
 ```python
 from modules.GD_API import GD_API
 
