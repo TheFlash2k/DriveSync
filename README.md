@@ -7,7 +7,7 @@ There are two different classes that are usable.
 - ***Sync***
 - ***GD_API***
 
-Note: To know how to generate the json token, read (token_gen.md)[token_gen.md]
+Note: To know how to generate the json token, read [Google Drive API Token Generation](token_gen.md)
 
 ## Sync:
 The Sync class is built upon the GD_API class and all it simply does is upload files from a certain folder into another folder within the drive in an organized manner.
