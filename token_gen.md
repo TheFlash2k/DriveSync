@@ -1,0 +1,14 @@
+# Generating Token:
+- Firstly, login to your google account and visit : `https://console.cloud.google.com/home/dashboard`
+- Now, you need to create a new project. To do that, you can see `Select a project` button on the left of the `Search` bar. Click on that and click `New Project` on the new pop-up menu.
+- Name your project something meaningful such as DriveSync or something that you can later use to identify it and then click on `Create`. You will be redirected to the main menu. Wait until the project is created successfully.
+- One the left navbar, Under `APIs and Services` menu, and then click on `Credentials`.
+- Click on `CREATE CREDENTIALS` button under the search bar and Select `OAuth Client ID`.
+- You will need to `Configure Consent Screen`.
+- Before doing anything, you need to open the following link in the new tab : `https://console.cloud.google.com/apis/library/drive.googleapis.com` and then click on Enable. Wait until you're redirected. Close this tab and go back to the old one.
+- Choosing User Type as `External`. You can change this if you want to limit the access.
+- Now, in App Information, you can fill whatever you want, but its recommended to fill with meaningingful information. Only 3 fields are required and we'll be filling only those: `App name, User support email, Email addresses.`. For App Name: `DriveSync`, for both of the other fields, you can use your own email address.
+- Now, you will be greeted with a `scopes` page. Click on `Add or Remove Scopes`. Now, in the filter, add `drive` filter and then select the one saying : `../auth/drive`. This will allow access to the entire drive. (If you decide to change the scope, you will need to change the scope in the script specfically in `modules/GD_API.py` so its recommended you do this.). Once done, scroll down and click on `update`. Now click on Save and Continue
+- Now you will need to `Add Users` that will be able to use this. You need to add atleast your own email to this in order to use the API successfully. Once done, click on Save and Continue. Once done, click on Back to Dashboard.
+- Now our OAuth Consent has been configured. We need to go back to `credentials` tab and then again click on `Create Credentials` and `OAuth Client ID`. This time you will be greeted with a different page, here you will choose Application type as `Desktop App` and set the name as `DriveSync`.
+- A new pop up will appear, click on OK. Now, in `OAuth 2.0 Client IDs`, you can see the newly created credentials, click on the Download button and this downloaded .json file will be used as your auth token for the script.
