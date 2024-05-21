@@ -1,3 +1,4 @@
 google_auth_oauthlib==0.4.6
 google_api_python_client==2.20.0
 protobuf==3.17.3
+requests>=2.32.0 # not directly required, pinned by Snyk to avoid a vulnerability
